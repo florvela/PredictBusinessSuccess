@@ -1,10 +1,8 @@
-# export_booster.py
 import joblib
 from pathlib import Path
 
-# Ahora miramos en /app/models, no PredictBusinessSuccess/models
 MODEL_PATH = Path("models/xgb_over.pickle")
-OUT_PATH   = Path("xgb_over.json")
+OUT_PATH   = Path("xgb_over.model") # lo quiero en binario
 
 print(f"📥 Cargando modelo desde {MODEL_PATH}…")
 m = joblib.load(MODEL_PATH)

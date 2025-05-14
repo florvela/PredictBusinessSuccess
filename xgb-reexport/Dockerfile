@@ -22,7 +22,7 @@ RUN pip install --upgrade pip \
 
 RUN pip install --no-build-isolation --no-cache-dir "Cython<3"
 
-# Instalo scikit-learn usando el numpy de apt y sin aislamiento
+# Instalo scikit-learn usando el numpy de apt y sin aislamiento para que acceda al numpy de debian
 RUN pip install --no-build-isolation --no-cache-dir scikit-learn==0.21.3
 
 CMD ["python", "export_booster.py"]
